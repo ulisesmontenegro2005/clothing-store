@@ -1,0 +1,30 @@
+/* MENU TITULO */
+.contenedorLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+}
+
+/* MENU NAVEGACION */
+.listaUl{
+    display: flex;
+    flex-direction: column;
+}
+
+.lista{
+    display: block;
+    margin-bottom: 0.5%;
+}
+
+.link{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.link:hover{
+    transition-duration: 0.5s;
+    color: blanchedalmond;
+}
