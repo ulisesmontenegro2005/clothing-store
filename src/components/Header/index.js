@@ -1,4 +1,6 @@
 import './main.css';
+import { HiShoppingCart } from "react-icons/hi";
+
 
 export function Container (props){
     return (
@@ -6,13 +8,9 @@ export function Container (props){
 
         <MenuTitulo texto="CLOTHING STORE"/>
 
-        {/* <div className="contenedorItems">
-
-            <a id="carritoDeCompras"><img src="./carrito-copia.svg" alt="carrito de compras"/></a> 
-
-        </div> */}
-
         <MenuNavegacion/>
+
+        <CartWidget/>
 
     </header>
     );
@@ -34,6 +32,17 @@ const MenuTitulo = (props) => {
     return (
         <div className="contenedorLogo">
             <h1> {props.texto} </h1>
+        </div>
+    );
+}
+
+const CartWidget = () => {
+    return (
+        <div>
+            <i href=''>
+                <HiShoppingCart className='carrito'></HiShoppingCart>
+                <span className='cantidad_carrito'>0</span>
+            </i>
         </div>
     );
 }

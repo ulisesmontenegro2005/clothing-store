@@ -25,6 +25,20 @@
 }
 
 .link:hover{
-    transition-duration: 0.5s;
-    color: blanchedalmond;
+    transition-duration: 0.2s;
+    font-weight: 900;
+}
+
+.carrito{
+    position: absolute;
+    right: 3.2%;
+    top: 3.2%;
+    width: 1.7em;
+    height: 1.7em;
+}
+
+.cantidad_carrito{
+    position: absolute;
+    right: 2.7%;
+    top: 3.2%;
 }
