@@ -1,0 +1,27 @@
+.main{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+/* CONTADOR */
+
+.containerContador{
+    display: flex;
+    min-height: 100px;
+    width: 150;
+    padding: 10px;
+    border: solid 2px black;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.aumentarContador{
+   height: 25px; 
+}
+
+.disminuirContador{
+    height: 25px;
+}
