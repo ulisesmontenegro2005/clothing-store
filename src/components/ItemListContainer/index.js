@@ -1,7 +1,7 @@
 import './main.css'
 import { ItemList } from '../ItemList';
 import { useEffect, useState } from 'react';
-import { getFetch } from '../../utils/getFetch';
+import { getFetch } from '../../utils/getFirebase/FetchData';
 
 export function ItemListContainer () {
 

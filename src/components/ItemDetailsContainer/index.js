@@ -2,7 +2,7 @@ import './main.css';
 import { useParams } from 'react-router-dom';
 import { ItemDetails } from '../ItemDetails';
 import { useEffect, useState } from 'react';
-import { getItemById } from '../../utils/getFetch';
+import { getItemById } from '../../utils/getFirebase/FetchData';
 
 export function ItemDetailsContainer () {
 
@@ -13,16 +13,18 @@ export function ItemDetailsContainer () {
     useEffect(() => {
 
         getItemById(idItem)
-        .then(Item => {
-            setData(Item)
+        .then(item =>{
+            setData(item[0])
         })
 
     }, []);
 
+    console.log(Data);
+
     return (
             <main className='mainDetails'>
                 <ItemDetails 
-                {...Data} 
+                {...Data}
                 />
             </main>
     );
