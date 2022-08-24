@@ -1,0 +1,15 @@
+.mainHome{
+    background-color: rgb(109, 108, 108);
+    width: 100%;
+    height: 600px;
+    padding: 25px;
+    display: flex;
+}
+.imgMain{
+    height: 550px;
+    width: 25%;
+}
+.textMain{
+    height: 550px;
+    width: 12%;
+}

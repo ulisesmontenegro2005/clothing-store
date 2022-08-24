@@ -1,0 +1,17 @@
+.cart{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttonVaciar{
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    padding: 4px;
+    border: 1px solid black;
+    background-color: rgb(153, 153, 153);
+    border-radius: 2px;
+}

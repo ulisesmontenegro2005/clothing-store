@@ -1,0 +1,38 @@
+.imagenItem{
+    width: 340px;
+    height: 220px;
+    padding: 0px 40px 0px 40px;
+  }
+  
+  .cardItem{
+    width: 22rem;
+    height: 380px;
+    border: black;
+    display: flex;
+    align-items: center;
+    justify-items: flex-end;
+  }
+
+  .bodyItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  
+  .botonItem{
+    background-color: black;
+  }
+
+  .detailsButton{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    background: none;
+    border: none;
+}
+
+.detailsButton:hover{
+    color: #0a58ca;
+    font-weight: 900;
+}

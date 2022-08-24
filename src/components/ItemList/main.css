@@ -1,0 +1,8 @@
+.contenedorItemList{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.loadingPage{
+  height: 400px;
+}

@@ -1,0 +1,27 @@
+/* CONTADOR */
+
+.containerContador{
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.aumentarContador{
+    height: 40px;
+    width: 30px;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.disminuirContador{
+    height: 40px;
+    width: 30px;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.numeroContador{
+    padding-top: 9px;
+    margin: 0;
+}

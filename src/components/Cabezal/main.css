@@ -1,0 +1,70 @@
+/* MENU TITULO */
+
+header{
+    margin-bottom: 40px;
+}
+
+.linkTitulo{
+    text-decoration: none;
+    color: black;
+}
+
+.linkTitulo:hover{
+    color: black;
+}
+
+.contenedorLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+}
+
+/* MENU NAVEGACION */
+.listaUl{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.lista{
+    display: block;
+    margin-bottom: 0.5%;
+}
+
+.link{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.link:hover{
+    transition-duration: 0.2s;
+    font-weight: 900;
+    color: rgb(109, 108, 108);
+}
+
+.carrito{
+    position: absolute;
+    right: 3.2%;
+    top: 3.2%;
+    width: 1.7em;
+    height: 1.7em;
+}
+
+.cantidadCarrito{
+    position: absolute;
+    right: 2.7%;
+    top: 3.2%;
+    text-decoration: none;
+    color: black;
+}
+
+.linkCarrito{
+    color: black;
+}
+
+.linkCarrito:hover{
+    color: black;
+}

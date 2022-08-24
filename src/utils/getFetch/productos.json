@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "nombre": "Buzo",
+        "desc": "Ideal para abrigarse en este invierno tan frio.",
+        "precio": 3000,
+        "stock": 3,
+        "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/029/453/products/crewneck-negro-2022-instagram-aclarado1-493eb498e75780603016577443290080-320-0.jpg"
+    },
+    {
+        "id": "2",
+        "nombre": "Saco",
+        "desc": "Ideal para abrigarse en este invierno tan frio.",
+        "precio": 5000,
+        "stock": 6,
+        "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/029/453/products/camisa-polar-moss-fondo-blanco-instagram-def1-e0fda18e9915cff08116536651777553-320-0.jpg"
+    },
+    {
+        "id": "3",
+        "nombre": "Gorro",
+        "desc": "Ideal para abrigarse en este invierno tan frio.",
+        "precio": 1500,
+        "stock": 2,
+        "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/029/453/products/beanie-tanda-2-tiendanube-21-b371036df6842ed52516488415830046-320-0.jpg"
+    }
+]
