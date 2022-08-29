@@ -15,7 +15,7 @@ function CartItem({ id, ItemCantToAdd, nombre}) {
             <br />
             Cantidad: <span>{ItemCantToAdd}</span>
             <br />
-            <button onClick={() => deleteItem(id)}>Eliminar</button>
+            <button className='botonEliminar' onClick={() => deleteItem(id)}>Eliminar</button>
         </div>
     </div>
   )

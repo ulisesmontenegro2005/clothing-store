@@ -1,6 +1,8 @@
 .contenedorItemList{
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
 }
 
 .loadingPage{

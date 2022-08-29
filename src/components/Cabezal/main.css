@@ -40,9 +40,9 @@ header{
 }
 
 .link:hover{
-    transition-duration: 0.2s;
-    font-weight: 900;
-    color: rgb(109, 108, 108);
+    transition-duration: 0.1s;
+    font-weight: 700;
+    color: #2C3F50;
 }
 
 .carrito{
@@ -58,6 +58,10 @@ header{
     right: 2.7%;
     top: 3.2%;
     text-decoration: none;
+    color: black;
+}
+
+.cantidadCarrito:hover{
     color: black;
 }
 

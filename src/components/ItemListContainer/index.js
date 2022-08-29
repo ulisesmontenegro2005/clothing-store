@@ -24,7 +24,7 @@ export function ItemListContainer () {
     }, []);
 
     return (
-        <main>
+        <main className='mainProducts'>
             <ItemList ItemList={Data} LoadingPage={Loading}/>
         </main>
     );

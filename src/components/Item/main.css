@@ -1,16 +1,15 @@
-.imagenItem{
-    width: 340px;
-    height: 220px;
-    padding: 0px 40px 0px 40px;
+  .imagenItem{
+    height: 100%;
+    width: 180px;
+    max-height: 180px;
+    align-self: center;
   }
   
   .cardItem{
-    width: 22rem;
-    height: 380px;
+    width: 20%;
+    height: 300px;
     border: black;
-    display: flex;
-    align-items: center;
-    justify-items: flex-end;
+    margin: 5px;
   }
 
   .bodyItem{
@@ -26,13 +25,8 @@
 
   .detailsButton{
     text-decoration: none;
-    color: black;
-    font-weight: 700;
-    background: none;
-    border: none;
-}
+  }
 
 .detailsButton:hover{
-    color: #0a58ca;
     font-weight: 900;
 }
