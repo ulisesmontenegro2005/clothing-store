@@ -2,9 +2,9 @@ import React, { memo, useContext } from 'react';
 import { CartContext } from '../../../context/CartContext'
 import './main.css';
 
-function CartItem({ id, ItemCantToAdd, nombre}) {
+function CartItem({ id, ItemCantToAdd, nombre }) {
 
-  const { deleteItem } = useContext(CartContext);
+  const { deleteItem, totalQttyPerItem } = useContext(CartContext);
 
   return (
     <div className='itemCarrito'>
@@ -14,6 +14,8 @@ function CartItem({ id, ItemCantToAdd, nombre}) {
             ID: <span>{id}</span>
             <br />
             Cantidad: <span>{ItemCantToAdd}</span>
+            <br />
+            Precio: <span>{totalQttyPerItem(id)}</span>
             <br />
             <button className='botonEliminar' onClick={() => deleteItem(id)}>Eliminar</button>
         </div>

@@ -47,3 +47,13 @@
 .checkoutLabel{
     width: 100%;
 }
+
+.botonComprar{
+    border: none;
+    width: 180px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: #2C3F50;
+    color: #EBEDEF;
+    align-self: center;
+}

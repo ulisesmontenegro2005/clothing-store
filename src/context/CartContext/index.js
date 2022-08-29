@@ -38,8 +38,22 @@ export function CartCustomContext ({children}) {
         return quantity.reduce((prev, curr) => prev + curr);
     }
 
+    const totalQttyPerItem = (idItem) => {
+        let index = cart.map(item => item.id).indexOf(idItem);
+        return cart[index].precio * cart[index].ItemCantToAdd;
+    }
+
+    const totalQtty = () => {
+        let total = cart.map(item => totalQttyPerItem(item.id));
+        return total.reduce((prev, curr) => prev + curr);
+    }
+
+    const calcTotal = () => {
+        return totalQtty();
+    }
+
     return (
-        <CartContext.Provider value={ {deleteItem, addCartItem, clearCart, qtty, cartData: cart} }>
+        <CartContext.Provider value={ {calcTotal, totalQttyPerItem, totalQtty,deleteItem, addCartItem, clearCart, qtty, cartData: cart} }>
             {children}
         </CartContext.Provider>
     );

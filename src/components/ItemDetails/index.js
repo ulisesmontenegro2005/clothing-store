@@ -40,7 +40,7 @@ export function ItemDetails ( {id,precio,nombre,desc,stock,img} ) {
             <div className='contenedorItem'>
                 <h2>{nombre}</h2>
                 <p>{desc}</p>
-                <img src={img}/>
+                <img src={img} alt='prenda de ropa'/>
                 <StockCounter stock={stock}/>
                 <p>${precio}</p>
 

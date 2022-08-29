@@ -8,7 +8,7 @@ export function Item ({ ...item }) {
         <div className='card cardItem'>
           <Link to={`/item/${item.id}`}>
 
-          <img className='card-img-top imagenItem' src={item.img}/>
+          <img className='card-img-top imagenItem' src={item.img} alt='prenda de ropa'/>
           
           </Link>
         </div>

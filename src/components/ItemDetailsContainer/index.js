@@ -19,8 +19,6 @@ export function ItemDetailsContainer () {
 
     }, []);
 
-    console.log(Data);
-
     return (
             <main className='mainDetails'>
                 <ItemDetails 
