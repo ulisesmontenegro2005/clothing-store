@@ -48,7 +48,7 @@ const CartWidget = () => {
         <div>
             <Link className='linkCarrito' to="/cart">
                 <HiShoppingCart className='carrito'></HiShoppingCart>
-                {(cartData.length > 0) ?  <a className='cantidadCarrito'>{qtty()}</a> : <a></a>}
+                {(cartData.length > 0) ?  <span className='cantidadCarrito'>{qtty()}</span> : <span></span>}
             </Link>
         </div>
     );

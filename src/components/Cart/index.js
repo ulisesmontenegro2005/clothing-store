@@ -4,31 +4,52 @@ import './main.css';
 import { CartContext } from '../../context/CartContext';
 import CartItem from './CartItem';
 import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
+import db from '../../utils/getFirebase/getData';
 
 export const Cart = () => {
     const { cartData, clearCart, totalQtty, calcTotal } = useContext(CartContext);
 
-    let nombre = document.getElementById('inputNombre');
-    let email = document.getElementById('inputEmail');
-    let numero = document.getElementById('inputNumero');
+    const createOrder = () => {
 
-    const itemsForDB = cartData.map(item => ({
-        id: item.id,
-        title: item.nombre,
-        price: item.precio
-    }));
+        let nombre = document.getElementById('inputNombre').value;
+        let email = document.getElementById('inputEmail').value;
+        let numero = document.getElementById('inputNumero').value;
 
-    const calculoTotal = (cartData.length == 0) ? 0 : calcTotal();
+        const itemsForDB = cartData.map(item => ({
+            id: item.id,
+            title: item.nombre,
+            price: item.precio
+        }));
 
-    let order = {
-        buyer: {
-            nombre: nombre,
-            email: email,
-            numero: numero
-        },
-        total: calculoTotal,
-        items: itemsForDB,
-        date: serverTimestamp()
+        let order = {
+            buyer: {
+                nombre: nombre,
+                email: email,
+                numero: numero
+            },
+            total: calcTotal(),
+            items: itemsForDB,
+            date: "30/8"
+        }
+
+        cartData.forEach(async (item) => {
+            const itemRef = doc(db, "productos", item);
+            await updateDoc(itemRef, {
+            stock: increment(-item.ItemCantToAdd)
+            });
+        });
+
+        const createOrderInFirestore = async () => {
+            const newOrderRef = doc(collection(db, "orders"));
+            await setDoc(newOrderRef, order);
+            return newOrderRef;
+        }
+
+        createOrderInFirestore()
+        .then(result => alert('Your order has been created. Please take note of the ID of your order.\n\n\nOrder ID: ' + result.id + '\n\n'))
+        .catch(err => console.log(err));
+  
+        clearCart();
     }
 
     return (
@@ -42,7 +63,7 @@ export const Cart = () => {
                     return <CartItem key={item.id} nombre={item.nombre} id={item.id} price={item.precio} ItemCantToAdd={item.ItemCantToAdd} />
                 })
                 : 
-                <a>No hay productos en el carrito! <Link className='linkNoItem' to={'/item'}>Ir de compras</Link></a>
+                <p>No hay productos en el carrito! <Link className='linkNoItem' to={'/item'}>Ir de compras</Link></p>
                 }
             </div>
 
@@ -70,7 +91,7 @@ export const Cart = () => {
                     <p>Total: <span className='totalPrice'>0</span></p>
              }
 
-             <button className='botonComprar' onClick={console.log(order)}> Terminar la compra </button>
+             <a className='botonComprar' onClick={createOrder}> Terminar compra </a>
 
             </form>
 
