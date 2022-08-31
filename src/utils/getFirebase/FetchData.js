@@ -17,9 +17,9 @@ export const getFetch = new Promise( (res, rej) => {
     }
 });
 
-export const getItemById = async (id) => {
+export const getItemById = async (idItem) => {
 
-    const q = query(collection(db, "productos"), where("id", "==", id));
+    const q = query(collection(db, "productos"), where("id", "==", idItem));
 
     const querySnapshot = await getDocs(q);
 

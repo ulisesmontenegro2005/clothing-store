@@ -32,8 +32,10 @@ export const Cart = () => {
             date: "30/8"
         }
 
+        console.log(order);
+
         cartData.forEach(async (item) => {
-            const itemRef = doc(db, "productos", item);
+            const itemRef = doc(db, "productos", item.id);
             await updateDoc(itemRef, {
             stock: increment(-item.ItemCantToAdd)
             });
