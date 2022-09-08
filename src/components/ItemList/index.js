@@ -6,7 +6,13 @@ export function ItemList ({ ItemList, LoadingPage }) {
     return (
       <div className='contenedorItemList'>
 
-            {LoadingPage ? <h1 className='loadingPage'> CARGANDO </h1>:
+            {LoadingPage ?  <ul className="loading">
+                              <li className="loadingList"></li>
+                              <li className="loadingList"></li>
+                              <li className="loadingList"></li>
+                              <li className="loadingList"></li>
+                              <li className="loadingList"></li>
+                            </ul>:
 
             ItemList.map((item) => {
             return (

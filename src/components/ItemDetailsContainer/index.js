@@ -7,8 +7,11 @@ import { getItemById } from '../../utils/getFirebase/FetchData';
 export function ItemDetailsContainer () {
 
     const [Data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
 
     const { idItem } = useParams();
+
+    console.log(idItem);
 
     useEffect(() => {
 
@@ -16,13 +19,16 @@ export function ItemDetailsContainer () {
         .then(item =>{
             setData(item[0])
         })
+        .catch((err)=> console.log('Ocurrio un error. ' + err))
+        .finally(()=>setLoading(false))
 
-    }, []);
+    }, [idItem]);
 
     return (
             <main className='mainDetails'>
                 <ItemDetails 
                 {...Data}
+                LoadingPage={loading}
                 />
             </main>
     );

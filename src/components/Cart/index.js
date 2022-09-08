@@ -18,7 +18,8 @@ export const Cart = () => {
         const itemsForDB = cartData.map(item => ({
             id: item.id,
             title: item.nombre,
-            price: item.precio
+            price: item.precio,
+            cant: item.ItemCantToAdd
         }));
 
         let order = {
@@ -29,7 +30,7 @@ export const Cart = () => {
             },
             total: calcTotal(),
             items: itemsForDB,
-            date: "30/8"
+            date: serverTimestamp()
         }
 
         console.log(order);
@@ -83,7 +84,7 @@ export const Cart = () => {
 
              <label className='checkoutLabel'>
                  Numero: <br/>
-                 <input id='inputNumero' type="number"></input>
+                 <input id='inputNumero' type="tel"></input>
              </label>
 
              {
@@ -93,7 +94,7 @@ export const Cart = () => {
                     <p>Total: <span className='totalPrice'>0</span></p>
              }
 
-             <a className='botonComprar' onClick={createOrder}> Terminar compra </a>
+             <a type="button" className='botonComprar' onClick={createOrder}> Terminar compra </a>
 
             </form>
 

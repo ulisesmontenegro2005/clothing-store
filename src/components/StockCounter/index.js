@@ -17,7 +17,7 @@ export function StockCounter (props){
     }
 
     return(
-        <div id='componenteMayorStock'>
+        <div className='componenteMayorStock'>
 
                 <div id='componenteStock' className='containerContador'>
 

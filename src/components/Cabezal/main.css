@@ -24,6 +24,7 @@ header{
 .listaUl{
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 0;
 }
 
@@ -37,6 +38,7 @@ header{
     text-decoration: none;
     color: black;
     font-weight: 600;
+    width: auto;
 }
 
 .link:hover{

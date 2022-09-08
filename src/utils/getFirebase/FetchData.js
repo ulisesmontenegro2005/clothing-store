@@ -35,4 +35,23 @@ export const getItemById = async (idItem) => {
 
     })
 }
+
+export const getItemByCategory = async (idCategory) => {
+
+    const q = query(collection(db, "productos"), where("idCategory", "==", idCategory));
+
+    const querySnapshot = await getDocs(q);
+
+    const firestoreData = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data()
+    }));
+
+
+    return new Promise ((resolve, reject) => { 
+
+        resolve(firestoreData)
+
+    })
+}
   

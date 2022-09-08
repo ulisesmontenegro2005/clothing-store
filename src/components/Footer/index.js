@@ -3,7 +3,7 @@ import './main.css';
 export function Footer () {
     return (
         <footer>
-          <p className='footerBody'>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>  
+          <p className='footerBody'>© 2022 - by Clothing Store Argentina</p>  
         </footer>
     );
 }
