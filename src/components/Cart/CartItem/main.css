@@ -1,9 +1,10 @@
-.itemCarrito{
+.generalContainer{
     width: 80%;
     background-color: gray;
     padding: 10px;
     border-radius: 25px 25px;
     color: black;
+    display: flex;
 }
 
 .botonEliminar{
@@ -13,4 +14,24 @@
     height: 30px;
     width: 100px;
     border-radius: 15px;
+}
+
+.containerImgCart{
+    height: 150px;
+    border-radius: 25px;
+    width: 150px;
+}
+
+.imgCart{
+    height: 150px;
+    border-radius: 25px;
+    width: 150px;
+}
+
+.itemCart{
+    width: 90%;
+    display: flex;
+    text-align: start;
+    justify-content: space-evenly;
+    align-items: center;
 }

@@ -63,3 +63,12 @@
 .linkFinallyAdded:hover{
     color: #2C3F50;
 }
+
+.stockCant{
+    margin-bottom: 0;
+    width: 100%;
+    border-bottom: gray 2px solid;
+    text-align: end;
+    margin: 5px 0 15px 0;
+}
+

@@ -24,10 +24,10 @@ const MenuNavegacion = () => {
     <nav className="contenedorNav">
         <ul className="listaUl">
             <Link className="link lista" to="/">Inicio</Link>
-            <a class="nav-link dropdown-toggle link lista" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-            <ul class="dropdown-menu">
+            <a className="nav-link dropdown-toggle link lista" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+            <ul className="dropdown-menu">
                 <li><Link className='dropdown-item' to="/item/">Todos</Link></li>
-                <li><hr class="dropdown-divider"/></li>
+                <li><hr className="dropdown-divider"/></li>
                 <li><Link className="dropdown-item" to={`/item/categories/accesorios`}>Accesorios</Link></li>
                 <li><Link className="dropdown-item" to={`/item/categories/sacos`}>Sacos</Link></li>
                 <li><Link className="dropdown-item" to={`/item/categories/buzos`}>Buzos</Link></li>

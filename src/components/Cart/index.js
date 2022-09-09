@@ -63,7 +63,7 @@ export const Cart = () => {
                     Vaciar Carrito
                 </button>
                 { (cartData.length > 0) ? cartData.map((item) => {
-                    return <CartItem key={item.id} nombre={item.nombre} id={item.id} price={item.precio} ItemCantToAdd={item.ItemCantToAdd} />
+                    return <CartItem key={item.id} nombre={item.nombre} id={item.id} price={item.precio} img={item.img} ItemCantToAdd={item.ItemCantToAdd} />
                 })
                 : 
                 <p>No hay productos en el carrito! <Link className='linkNoItem' to={'/item'}>Ir de compras</Link></p>

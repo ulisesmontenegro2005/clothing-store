@@ -30,3 +30,19 @@
 .detailsButton:hover{
     font-weight: 900;
 }
+
+.noStock{
+  position: absolute;
+  width: 230px;
+  height: 180px;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.noStockText{
+  position: absolute;
+  top: 5px;
+  padding-left: 2px;
+  color: black;
+  background-color: lightblue;
+}
